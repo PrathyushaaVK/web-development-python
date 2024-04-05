@@ -1,23 +1,24 @@
 h1 {
   font-family: Georgia, sans-serif;
   font-size: 40px;
-  font-weight: 40px;
+  font-weight: 25px;
   color: rgb(10,70,100); 
   text-align: center;
 }
 h2 {
   font-family: Georgia, serif;
   /* font-size: 30px; */
-  font-weight: normal;
   color: rgb(60,70,100); 
   text-align: center;
+  font-weight: normal;
 }
 h3 {
   font-family: Georgia, serif;
   /* font-size: 28px; */
-  font-weight: normal;
   color: rgb(60,70,100); 
   text-align: center;
+  font-weight: normal;
+}
 #body {
   background-color: rgb(240, 250, 255);
 }
@@ -27,11 +28,15 @@ h3 {
   object-fit: cover;
 }
 #container {
-  max-width: 800px;
-  margin-left: 200px;
+  max-width: 1200px;
+  margin: 0 auto;
 }  
 p {
   font-family: Georgia, serif;
-  font-weight: normal;
   color: black;
+  text-align: justify;
+  font-weight: normal;
+}
+#contact-button{
+  text-align:center
 }
