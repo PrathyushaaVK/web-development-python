@@ -2,27 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shaw Inc. Careers</title> 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body id="body">
-    <div id="container">
-      <h1>Shaw Inc. Careers</h1>
-      <h2>Welcome to our careers page! Explore our career options below.</h2>
-      <img src="https://d727bf6f-4e44-45d1-abe9-1351d780b8cd-00-cgcr9ijagn1v.kirk.replit.dev/static/careersBanner.jpg" id="banner" height="850px" width="100%">
-      <h2>About Shaw Inc.</h2>
-      <p>
+    <div class="container">
+      <h1 class="text-center display-3">{{companyName}} Careers</h1>
+      <h3 class="text-center mb-4 display-6">Welcome to our careers page! Explore our career options below.</h3>
+      <img src="https://d727bf6f-4e44-45d1-abe9-1351d780b8cd-00-cgcr9ijagn1v.kirk.replit.dev/static/careers.jpg" class="img-fluid" id="banner" height="650px" width="100%">
+      <h3 class="text-center mt-4 mb-4 display-6">About Shaw Inc.</h3>
+      <p >
         Welcome to Shaw Inc., where we thrive at the intersection of innovation and technology. As a leading firm in cloud engineering, data science, and software product development, we empower businesses to unlock their full potential in the digital era. Our team of experts harnesses the power of the cloud to create scalable and efficient solutions tailored to our clients' needs. Whether it's designing cutting-edge software products or leveraging data science for actionable insights, we are committed to delivering excellence in every project.
       </p>  
-      <p>
+      <p >
         At Shaw Inc., we foster a collaborative and dynamic work environment where creativity and expertise flourish. Join us in shaping the future of technology and making a meaningful impact on industries worldwide. Explore exciting career opportunities with us and embark on a journey of continuous learning and growth. Together, let's innovate, inspire, and transform the world of technology at Shaw Inc.
       </p>
-      <h2>Open Positions</h2>
-      <p>Todo</p>
-      <p>Get in touch with us.</p>
-      <div style="text-align:center;">
-      <button id="contact-button">Contact</button>
+      <h3 class="text-center display-6">Open Positions</h3>
+      <div>
+        {% for job in jobs %}
+          {% include 'jobItem.html' %}
+        {% endfor %}
       </div>
+      <p class="text-center">Get in touch with us.</p>
+      <div class="text-center">
+      <button class="btn btn-primary btn-large" id="contact-button">Contact</button>
+        <p class="mt-4">Copyright 2024, Shaw Inc. </p>
+      </div>  
     </div>
   </body>
 </html>
